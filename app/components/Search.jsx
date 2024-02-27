@@ -13,7 +13,7 @@ export default function Search({ setWeatherData, setLoading, setError }) {
     );
     const data = await response.json();
     console.log(data);
-    if (data.cod === "404") setError(`Error: ${data.message}`);
+    if (data.cod === "404") setError(data);
     else setWeatherData(data);
 
     setInput("");

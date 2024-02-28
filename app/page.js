@@ -11,14 +11,21 @@ export default function Home() {
   const [error, setError] = useState();
 
   return (
-    <main className="m-0 flex h-[100vh] w-full justify-center bg-gray-400">
-      <div className="flex w-[500px] flex-col items-center rounded-2xl bg-blue-400 p-5">
-        <Search
-          setWeatherData={setWeatherData}
-          setLoading={setLoading}
-          setError={setError}
-        />
-        {loading ? <Loading /> : <Display data={weatherData} error={error} />}
+    <main className="m-0 flex h-dvh w-full justify-center bg-gray-400 items-center">
+      <div className="flex w-full h-dvh md:max-w-[1000px] md:h-[600px] flex-col items-center bg-blue-400 p-5 md:rounded-2xl">
+        <div>
+          <Search
+            setWeatherData={setWeatherData}
+            setLoading={setLoading}
+            setError={setError}
+          />
+        </div>
+        {/* {loading ? (
+            <Loading />
+          ) : (
+            weatherData && <Display data={weatherData} error={error} />
+          )} */}
+        <Display data={weatherData} error={error} />
       </div>
     </main>
   );

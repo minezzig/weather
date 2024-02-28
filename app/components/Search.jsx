@@ -13,15 +13,14 @@ export default function Search({ setWeatherData, setLoading, setError }) {
     );
     const data = await response.json();
     console.log(data);
-    if (data.cod === "404") setError(data);
-    else setWeatherData(data);
+    setWeatherData(data);
 
     setInput("");
     setLoading(false);
   };
 
   return (
-    <>
+    <div>
       <input
         type="text"
         name="search"
@@ -29,8 +28,8 @@ export default function Search({ setWeatherData, setLoading, setError }) {
         placeholder="Choose a city..."
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && fetchData()}
-        className="rounded-3xl p-2 w-3/4"
+        className="rounded-3xl p-2 w-full"
       />
-    </>
+    </div>
   );
 }

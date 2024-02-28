@@ -17,14 +17,16 @@ export default function Display({ data }) {
           {/* {data.name}, {data.sys.country} */}
         </div>
         <div>Clear Sky</div>
-        <div className="w-52 md:w-96">
-          <img src="/images/01d.svg" alt="pic" />
+        <div className="m-5 w-52 -translate-x-20 md:w-72">
+          <img src="/images/01d.svg" alt="weather" />
         </div>
-        <div className="text-6xl">
-          32º
+        <div className="flex -translate-y-28 flex-col items-center justify-center">
+          <div className="rounded-full bg-black bg-opacity-10 px-3 py-5 text-8xl leading-tight">
+            32º
+          </div>
           {/* {data.main.temp.toFixed()}ºC*/}
+          <div className="text-sm">Feels Like: 25</div>
         </div>
-        <div>Feels Like: 25</div>
       </div>
       <div>
         <Sunrise />

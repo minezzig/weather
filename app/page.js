@@ -12,14 +12,14 @@ export default function Home() {
 
   return (
     <main className="m-0 flex h-dvh w-full justify-center bg-gray-400 items-center">
-      <div className="flex w-full h-dvh md:max-w-[1000px] md:h-[600px] flex-col items-center bg-blue-400 p-5 md:rounded-2xl">
-        <div>
+      <div className="flex w-full h-dvh md:max-w-[1000px] md:h-[600px] flex-col items-center bg-blue-400 p-5 md:rounded-2xl shadow-xl relative">
+ 
           <Search
             setWeatherData={setWeatherData}
             setLoading={setLoading}
             setError={setError}
           />
-        </div>
+     
         {/* {loading ? (
             <Loading />
           ) : (

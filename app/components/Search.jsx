@@ -20,7 +20,7 @@ export default function Search({ setWeatherData, setLoading, setError }) {
   };
 
   return (
-    <div>
+    <div className="w-full flex justify-end md:absolute mr-20">
       <input
         type="text"
         name="search"
@@ -28,7 +28,7 @@ export default function Search({ setWeatherData, setLoading, setError }) {
         placeholder="Choose a city..."
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && fetchData()}
-        className="rounded-3xl p-2 w-full"
+        className="rounded-3xl p-2"
       />
     </div>
   );

@@ -9,7 +9,7 @@ export default function Search({ setWeatherData, setLoading, setError }) {
     setError("");
 
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&APPID=${process.env.NEXT_PUBLIC_API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&APPID=${process.env.NEXT_PUBLIC_API_KEY}`,
     );
     const data = await response.json();
     console.log(data);
@@ -20,7 +20,8 @@ export default function Search({ setWeatherData, setLoading, setError }) {
   };
 
   return (
-    <div className="w-full flex justify-end md:absolute mr-20">
+    <div className="mb-5 flex w-full justify-end md:absolute md:pr-10">
+      <img className="mr-3 w-10 hover:rotate-90 transition-all" src="/images/search.svg" alt="search" />
       <input
         type="text"
         name="search"

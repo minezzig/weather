@@ -2,6 +2,8 @@
 
 This simple app allows users to search for the current temperature and weather conditions by searching for a city name.  If the selected city is not found, it will display a not found screen, or a loading screen while the information is retrieved.  Data is preselected to be viewed using the metric system, but can be converted to the imperial system with a click on the symbol in the bottom right corner.  The search bar slides away when not in use and can be slid out by clicking on the magnifying glass.  Hovering over any of the stat boxes will display a small animation of the icon. 
 
+Deployed: http://weather-minezzig.vercel.app
+
 <center>
 <p float="left">
 <img src="./app/screenshots/screenshot-desktop.jpg" height=400>

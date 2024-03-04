@@ -12,7 +12,7 @@ export default function Temps({ temp, low, high, convertToF, units }) {
       <div>
         <img className="w-14" src="/images/low.svg" alt="sunrise" />
         <div className="text-center text-white">
-          {units === "metric" ? low.toFixed() : convertToF(low)}
+          {units === "metric" ? low.toFixed() : convertToF(low)}º
         </div>
       </div>
       <div className="relative h-1 w-3/4 -translate-y-2 rounded bg-black">
@@ -26,7 +26,7 @@ export default function Temps({ temp, low, high, convertToF, units }) {
       <div>
         <img className="w-14" src="/images/high.svg" alt="sunset" />
         <div className="text-white">
-          {units === "metric" ? high.toFixed() : convertToF(high)}
+          {units === "metric" ? high.toFixed() : convertToF(high)}º
         </div>
       </div>
     </div>

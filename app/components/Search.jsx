@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function Search({
-  setWeatherData,
-  setLoading,
-}) {
+export default function Search({ setWeatherData, setLoading }) {
   const [input, setInput] = useState("");
   const [searchOpen, setSearchOpen] = useState(true);
 
@@ -17,7 +14,7 @@ export default function Search({
     );
     const data = await response.json();
     setWeatherData(data);
-    setSearchOpen(false)
+    setSearchOpen(false);
 
     setInput("");
     setLoading(false);
@@ -26,7 +23,7 @@ export default function Search({
   return (
     <div className="mb-5 flex w-full justify-end md:absolute md:pr-10">
       <img
-        className="mr-3 w-10 transition-all hover:rotate-90 cursor-pointer"
+        className="mr-3 w-10 cursor-pointer transition-all hover:rotate-90"
         src="/images/search.svg"
         onClick={() => setSearchOpen(!searchOpen)}
         alt="search"
@@ -38,7 +35,7 @@ export default function Search({
         placeholder="Choose a city..."
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && fetchData()}
-        className={searchOpen ? "rounded-3xl w-52 p-2 transition-all" : "rounded-3xl w-0 transition-all"}
+        className={`rounded-3xl transition-all ${searchOpen ? "w-52 p-2" : "w-0"}`}
       />
     </div>
   );

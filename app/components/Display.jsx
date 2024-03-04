@@ -48,7 +48,7 @@ export default function Display({ data }) {
 
             <div className=" relative flex -translate-y-5 pb-10 md:translate-y-0 md:pb-0">
               <div className="max-w-44 -translate-x-20 md:w-48 md:-translate-x-20 md:-translate-y-16">
-                <img src="/images/03d.svg" alt="weather" />
+                <img src={`/images/${data.weather[0].icon}.svg`} alt="weather" />
               </div>
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-center md:inset-0">
                 <div className="block h-40 w-40 rounded-full bg-black bg-opacity-10 text-center text-8xl leading-[10rem] text-white">

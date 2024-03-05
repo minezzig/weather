@@ -6,14 +6,17 @@ import Temps from "./Temps";
 export default function Display({ data }) {
   const [units, setUnits] = useState("metric");
 
+  // toggle if user wants to view metric or imperial data
   const toggleUnits = () => {
     setUnits((prevUnit) => (prevUnit === "metric" ? "imperial" : "metric"));
   };
 
+  // change data to/from celcius/fahrenheit
   const convertToF = (temp) => {
     return ((9 / 5) * temp + 32).toFixed();
   };
 
+  // calculate (and format) what the local time is in the location the user has searched
   const getLocalTime = (timezone) => {
     const date = new Date(); // get date
     const now = date.getTime(); // turn to milliseconds

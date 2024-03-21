@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Weather App",
+  title: "LivelyWeather",
   description: "Look up current temperature and weather anywhere in the world!",
 };
 

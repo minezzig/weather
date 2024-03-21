@@ -19,9 +19,9 @@ export default function Home() {
         {loading ? (
           <Loading />
         ) : (
-          weatherData && (
+          weatherData ? (
             <Display data={weatherData} />
-          )
+          ) : <div className="md:h-full font-mono md:mt-auto mt-28 flex flex-col items-center justify-center"><h1 className="text-white text-4xl ">LivelyWeather</h1></div>
         )}
       </div>
     </main>
